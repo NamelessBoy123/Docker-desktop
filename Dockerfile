@@ -13,7 +13,7 @@ ENV YARN_RESOURCEMANAGER_USER=root
 
 # Install necessary dependencies
 RUN apt-get update && \
-    apt-get install -y ssh openjdk-8-jdk neovim junit && \
+    apt-get install -y ssh openjdk-8-jdk neovim junit dos2unix && \
     rm -rf /var/lib/apt/lists/*
 
 # Download and extract Hadoop
@@ -61,6 +61,8 @@ COPY restart $HADOOP_HOME/bin/restart
 COPY init $HADOOP_HOME/bin/init
 RUN chmod +x $HADOOP_HOME/bin/restart
 RUN chmod +x $HADOOP_HOME/bin/init
+RUN dos2unix $HADOOP_HOME/bin/restart
+RUN dos2unix $HADOOP_HOME/bin/init
 
 # Install pig
 RUN wget -O pig.tar.gz https://downloads.apache.org/pig/pig-0.17.0/pig-0.17.0.tar.gz
