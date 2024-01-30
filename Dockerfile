@@ -77,7 +77,7 @@ RUN mv hbase-2.5.7 /usr/local/hbase
 RUN echo "export HBASE_HOME=/usr/local/hbase" >> ~/.bashrc
 RUN echo "export PATH=\$PATH:\$HBASE_HOME/bin" >> ~/.bashrc
 RUN echo "export HBASE_DISABLE_HADOOP_CLASSPATH_LOOKUP=\"true\"" >> /usr/local/hbase/conf/hbase-env.sh
-RUN echo "JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/" >> /usr/local/hbase/conf/hbase-env.sh
+RUN echo "JAVA_HOME=/usr/lib/jvm/java-8-openjdk-arm64/" >> /usr/local/hbase/conf/hbase-env.sh
 COPY hbase-site.xml ~/hbase-site.xml
 
 RUN mkdir -p /hadoop/zookeeper
