@@ -13,7 +13,7 @@ ENV YARN_RESOURCEMANAGER_USER=root
 
 # Install necessary dependencies
 RUN apt-get update && \
-    apt-get install -y ssh openjdk-8-jdk neovim junit python-is-python3 nano
+    apt-get install -y ssh openjdk-8-jdk neovim junit python-is-python3 nano dos2unix
 
 # Download and extract Hadoop
 RUN mkdir -p $HADOOP_HOME
