@@ -28,8 +28,8 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 ```
 <br>
 b). Verify that the Docker Engine installation is successful by running the command : (This command downloads a test image and runs it in a container. When the container runs, it prints a confirmation message and exits.) You have now successfully installed and started Docker Engine.
-
 ```bash
+
 sudo docker run hello-world
 ```
 <br>
