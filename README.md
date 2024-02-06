@@ -3,7 +3,9 @@ Use this to get a quick version of Hadoop to run on Docker.
 
 1. Install Docker on your host PC
 <br>
- i).  For linux(ubuntu )
+
+
+ i).  For linux(ubuntu ) 
 ```bash
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -18,17 +20,19 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 ```
+<br>
 
---To install the latest version, run following command:
+ a). To install the latest version, run following command:
 ```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
-
---Verify that the Docker Engine installation is successful by running the command : (This command downloads a test image and runs it in a container. When the container runs, it prints a confirmation message and exits.) You have now successfully installed and started Docker Engine.
+<br>
+b). Verify that the Docker Engine installation is successful by running the command : (This command downloads a test image and runs it in a container. When the container runs, it prints a confirmation message and exits.) You have now successfully installed and started Docker Engine.
 
 ```bash
 sudo docker run hello-world
 ```
+<br>
 
 2. Clone your platform specific branch of this repository
 ```bash
