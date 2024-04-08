@@ -58,6 +58,19 @@ cd docker-hadoop
 docker build -t hadoop .
 ```
 <br>
+or <br>
+ 
+```bash
+
+# AMD-based (Intel)
+docker pull silicoflare/hadoop:amd
+
+# ARM-based (Mac M series)
+docker pull silicoflare/hadoop:arm
+
+```
+<br>
+
 
 5. Wait for the build to finish
 <br>
